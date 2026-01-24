@@ -1,0 +1,5 @@
+Running script is disabled
+
+1. Open Windows powershell and run as administrator
+2. Write : Set-ExcecutionPolicy Remotesigned
+3. Click Y/ Write Y, Enter
