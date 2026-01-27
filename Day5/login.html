@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Angelo Brewing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff5544 0%, #ffaa44 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            height: 100vh;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px;
+        }
+
+        .logo {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 165, 0, 0.5);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            margin-bottom: 40px;
+        }
+
+        .tagline {
+            font-size: 72px;
+            font-weight: 900;
+            color: #000;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .brand {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            letter-spacing: 2px;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+
+        .login-card {
+            background: rgba(255, 165, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 60px 50px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-title {
+            font-size: 36px;
+            font-weight: 900;
+            color: #000;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            background: #ffdd99;
+            border-radius: 30px;
+            padding: 0 20px;
+            height: 50px;
+        }
+
+        .input-icon {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #000;
+        }
+
+        .input-wrapper input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            color: #000;
+            outline: none;
+        }
+
+        .input-wrapper input::placeholder {
+            color: #666;
+        }
+
+        .login-btn {
+            width: 100%;
+            height: 50px;
+            background: #ffdd99;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: transform 0.2s;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.02);
+            color: #ff5544;
+        }
+
+        .signup-text {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .signup-text a {
+            color: #000;
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-section, .right-section {
+                padding: 30px;
+            }
+
+            .tagline {
+                font-size: 48px;
+            }
+
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo"></div>
+            <div class="tagline">cold,<br>smooth<br>& tasty.</div>
+            <div class="brand">ANGELO BREWING</div>
+        </div>
+
+        <div class="right-section">
+            <div class="login-card">
+                <h1 class="login-title">LOGIN</h1>
+                <form>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="login-btn">LOGIN</button>
+                </form>
+                <div class="signup-text">
+                    Don't have an account? <a href="#">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
